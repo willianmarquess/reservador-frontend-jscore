@@ -1,0 +1,206 @@
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 14px;
+    }
+    
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .container {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .navbar {
+        width: 100vw;
+        height: 50px;
+        background-color: #4D9DE0;
+    }
+    
+    .navbar-title {
+        margin-top: 11px;
+    }
+    
+    .navbar-title a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .navbar-title a:hover {
+        color: #829CBC;
+    }
+    
+    .menu-superior-direito {
+        margin-top: 11px;
+        text-decoration: none;
+        list-style: none;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .content {
+        padding: 10px;
+    }
+    
+    .box-content {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .botaoMenu {
+        margin-left: 10px;
+        border: none;
+        border-radius: 2px;
+        background-color: rgba(255, 255, 255, 0);
+        display: none;
+    }
+    
+    .botaoMenu span {
+        padding-top: 2px;
+        color: white;
+    }
+    
+    .sidebar {
+        height: calc(100vh - 50px);
+        width: 200px;
+        background-color: #7CC4EC;
+    }
+    
+    .sidebar a {
+        display: block;
+        padding-top: 10px;
+        padding-left: 30px;
+        cursor: pointer;
+        height: 35px;
+    }
+    
+    .sidebar a:hover {
+        background-color: white;
+        color: #7CC4EC
+    }
+    
+    .lista {
+        margin-top: 10px;
+        border-bottom: 1px solid white;
+    }
+    
+    .lista-oculta {
+        display: none;
+    }
+    
+    .lista-oculta a {
+        padding-left: 50px;
+    }
+    
+    .lista-visivel {
+        display: block;
+    }
+    
+    .selected {
+        background-color: #4D9DE0;
+        color: white;
+    }
+    
+    .content {
+        width: 100vw;
+    }
+    
+    .row {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    
+    .col {
+        width: 100%;
+    }
+    
+    .col input,
+    select {
+        height: 30px;
+        border-radius: 5px;
+        background-color: whitesmoke;
+        border: 0.5px solid #A6ABAB;
+        color: gray;
+        margin-top: 5px;
+        color: black;
+        padding-left: 5px;
+        outline: 0;
+    }
+    
+    .col input:focus,
+    select:focus {
+        -moz-box-shadow: 0 0 8px #7CC4EC;
+        -webkit-box-shadow: 0 0 8x #7CC4EC;
+        box-shadow: 0 0 8px #7CC4EC;
+        border: none;
+    }
+    
+    .row .col .botaocentro {
+        display: block;
+        margin: 0 auto;
+        height: 40px;
+        width: 160px;
+        border: 0.5px solid white;
+        background-color: #7CC4EC;
+        color: white;
+        border-radius: 5px;
+        outline: 0;
+        cursor: pointer;
+    }
+    
+    .titulo {
+        font-size: 20px;
+    }
+    
+    @media (min-width: 320px) {
+        .content {
+            position: fixed;
+        }
+        .sidebar {
+            display: none;
+            z-index: 1;
+        }
+        .botaoMenu {
+            display: block;
+        }
+        .col input,
+        select {
+            width: 95%;
+        }
+    }
+    
+    @media (min-width: 992px) {
+        .sidebar {
+            display: block;
+        }
+        .botaoMenu {
+            display: none;
+        }
+        .content {
+            position: initial;
+        }
+        .col input,
+        select {
+            width: 40%;
+        }
+        .row .col .botaocentro {
+            display: block;
+            margin: 0 0;
+        }
+    }
+    
+    .sideBarShow {
+        display: block;
+    }

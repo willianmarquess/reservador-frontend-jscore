@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #4D9DE0;
+}
+
+.box-login {
+    width: 350px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px 3px whitesmoke;
+}
+
+.cad {
+    height: 405px;
+}
+
+.box-login h2 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-weight: 900;
+    color: #4D9DE0;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputs {
+    height: 50px;
+    width: 80%;
+    display: block;
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: whitesmoke;
+    border: none;
+    color: gray;
+}
+
+.labelSelect {
+    width: 100%;
+    padding-left: 35px;
+    text-align: left;
+    color: #4D9DE0;
+}
+
+form div {
+    padding-top: 10px;
+    width: 100%;
+    padding-left: 10%;
+}
+
+form div a {
+    color: #4D9DE0;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+button {
+    margin-top: 10px;
+    width: 80%;
+    height: 50px;
+    border: none;
+    background-color: #4D9DE0;
+    color: white;
+    cursor: pointer;
+}

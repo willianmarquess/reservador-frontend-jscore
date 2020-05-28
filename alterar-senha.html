@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/global.css">
+    <script type="module" src="js/controller/UsuarioAlterarSenhaCTR.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <h3 class="navbar-title">
+                <a href="#">Dashboard</a>
+            </h3>
+            <ul class="menu-superior-direito">
+                <li>Usuário: <span id="nomeUsuario">Admin</span></li>
+                <li>
+                    <button type="button" id="#buttonMenu" class="botaoMenu">
+                        <span class="material-icons">
+                            reorder
+                        </span>
+                    </button>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <div class="box-content">
+        <nav class="sidebar" id="#sideBar">
+            <ul class="lista">
+                <li class="item-lista">
+                    <a href="principal.html" class="selected">Home</a>
+
+                </li>
+                <li class="item-lista">
+                    <a href="#" id="#menuPerfil">Perfil</a>
+                    <ul class="lista-oculta" id="#menuPerfilDados">
+                        <li><a href="meus-dados.html">Meus dados</a></li>
+                        <li class="rolecomum"><a href="#">Vincular empresa</a></li>
+                        <li><a href="alterar-senha.html">Alterar senha</a></li>
+                        <li><a href="#" id="menuSair">Sair</a></li>
+                    </ul>
+                </li>
+                <li class="item-lista">
+                    <a href="#" id="#menuCadastros">Cadastros</a>
+                    <ul class="lista-oculta" id="#menuCadastrosItems">
+                        <li class="roleadmin"><a href="#">Empresa</a></li>
+                        <li class="rolecomum"><a href="#">Vincular Empresa</a></li>
+                    </ul>
+                </li>
+                <li class="item-lista">
+                    <a href="#" id="#menuPesquisas">Pesquisas</a>
+                    <ul class="lista-oculta" id="#menuPesquisasItems">
+                        <li class="roleadmin"><a href="#" id="menuPesquisaFunc">Funcionário</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h3 class="titulo">Meus Dados</h3>
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <label for="senhaUsuario">Nova senha: </label><br>
+                        <input type="password" id="senhaUsuario">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="repetirSenha">Digite novamente: </label><br>
+                        <input type="password" id="repetirSenha">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button type="button" id="botao" class="botaocentro">Atualizar</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <script>
+        var menuPesquisas = document.getElementById("#menuPesquisas");
+        var menuPesquisasItems = document.getElementById("#menuPesquisasItems");
+        menuPesquisas.addEventListener("click", () => {
+            menuPesquisas.classList.toggle("selected");
+            menuPesquisasItems.classList.toggle('lista-visivel');
+        })
+
+        var menuCadastros = document.getElementById("#menuCadastros");
+        var menuCadastrosItems = document.getElementById("#menuCadastrosItems");
+        menuCadastros.addEventListener("click", () => {
+            menuCadastros.classList.toggle("selected");
+            menuCadastrosItems.classList.toggle('lista-visivel');
+        })
+
+        var meusPerfil = document.getElementById("#menuPerfil");
+        var menuPerfilDados = document.getElementById("#menuPerfilDados");
+        meusPerfil.addEventListener("click", () => {
+            meusPerfil.classList.toggle("selected");
+            menuPerfilDados.classList.toggle('lista-visivel');
+        })
+
+        var botaoMenu = document.getElementById("#buttonMenu");
+        var sideBar = document.getElementById("#sideBar");
+        botaoMenu.addEventListener("click", () => {
+            sideBar.classList.toggle('sideBarShow');
+        })
+    </script>
+</body>
+
+</html>
